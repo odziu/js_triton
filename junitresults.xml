@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Registration test" timestamp="2019-03-14T18:00:15" hostname="localhost" time="20.647" errors="0" tests="1" skipped="0" failures="1">
+  <testcase classname="Registration test" name="Test verifies that user can create an account and login in it" time="20.644">
+   <failure type="exception" message="Failed: Cannot find logout button
+Wait timed out after 5004ms"><![CDATA[TimeoutError: Cannot find logout button
+Wait timed out after 5004ms
+    at C:\Users\odziu\js_triton\node_modules\selenium-webdriver\lib\promise.js:2201:17
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+From asynchronous test: 
+Error
+    at Suite.describe (C:\Users\odziu\js_triton\spec.js:54:5)
+    at addSpecsToSuite (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\odziu\js_triton\spec.js:53:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+ <testsuite name="LogIn tests" timestamp="2019-03-14T18:00:36" hostname="localhost" time="0.002" errors="0" tests="2" skipped="0" failures="0">
+  <testcase classname="LogIn tests" name="Test verifies that user can login using valid credentials" time="0.001">
+  </testcase>
+  <testcase classname="LogIn tests" name="Test verifies that user can not login using invalid credentials" time="0.001">
+  </testcase>
+ </testsuite>
+</testsuites>
