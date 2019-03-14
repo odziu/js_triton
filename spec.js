@@ -69,6 +69,7 @@ describe('Registration test', () => {
         await browser.wait(async () =>
             await accountBtn.isPresent() && await accountBtn.isDisplayed(), 5000, 'Cannot find account button'
         );
+        // trouble with waits
         await browser.sleep(10000);
         await accountBtn.click();
         await browser.sleep(10000);
@@ -79,6 +80,10 @@ describe('Registration test', () => {
             await logoutBtn.isPresent() && await logoutBtn.isDisplayed(), 5000, 'Cannot find logout button'
         );
         await logoutBtn.click();
+        await browser.wait(async () =>
+            await accountBtn.isPresent() && await accountBtn.isDisplayed(), 5000, 'Cannot find account button' 
+        );
+        await accountBtn.click();
         await loginField.clear().sendKeys(randomUsername);
         await passwordField.clear().sendKeys(randomPassword);
         await loginBtn.click();
