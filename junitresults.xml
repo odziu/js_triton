@@ -1,38 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="Registration test" timestamp="2019-03-14T18:11:44" hostname="localhost" time="25.13" errors="0" tests="1" skipped="0" failures="1">
-  <testcase classname="Registration test" name="Test verifies that user can create an account and login in it" time="25.127">
-   <failure type="exception" message="Failed: No element found using locator: By(css selector, *[id=&amp;quot;loginform-username&amp;quot;])"><![CDATA[NoSuchElementError: No element found using locator: By(css selector, *[id="loginform-username"])
-    at elementArrayFinder.getWebElements.then (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:814:27)
-    at process._tickCallback (internal/process/next_tick.js:68:7)Error
-    at ElementArrayFinder.applyAction_ (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:459:27)
-    at ElementArrayFinder.(anonymous function).args [as clear] (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:91:29)
-    at ElementFinder.(anonymous function).args [as clear] (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:831:22)
-    at UserContext.fit (C:\Users\odziu\js_triton\spec.js:82:26)
-    at process._tickCallback (internal/process/next_tick.js:68:7)Error
-    at ElementArrayFinder.applyAction_ (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:459:27)
-    at ElementArrayFinder.(anonymous function).args [as sendKeys] (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:91:29)
-    at ElementFinder.(anonymous function).args [as sendKeys] (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:831:22)
-    at UserContext.fit (C:\Users\odziu\js_triton\spec.js:82:34)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-From asynchronous test: 
-Error
-    at Suite.describe (C:\Users\odziu\js_triton\spec.js:54:5)
-    at addSpecsToSuite (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
-    at Env.describe (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
-    at describe (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
-    at Object.<anonymous> (C:\Users\odziu\js_triton\spec.js:53:1)
-    at Module._compile (internal/modules/cjs/loader.js:688:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
-    at Module.load (internal/modules/cjs/loader.js:598:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)]]>
+ <testsuite name="LogIn tests" timestamp="2019-03-15T12:53:29" hostname="localhost" time="35.824" errors="0" tests="2" skipped="0" failures="1">
+  <testcase classname="LogIn tests" name="Test verifies that user can login using valid credentials" time="4.877">
+  </testcase>
+  <testcase classname="LogIn tests" name="Test verifies that user can not login using invalid credentials" time="30.935">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)]]>
    </failure>
   </testcase>
  </testsuite>
- <testsuite name="LogIn tests" timestamp="2019-03-14T18:12:09" hostname="localhost" time="0.002" errors="0" tests="2" skipped="0" failures="0">
-  <testcase classname="LogIn tests" name="Test verifies that user can login using valid credentials" time="0">
-  </testcase>
-  <testcase classname="LogIn tests" name="Test verifies that user can not login using invalid credentials" time="0.001">
+ <testsuite name="Registration test" timestamp="2019-03-15T12:54:05" hostname="localhost" time="0.005" errors="0" tests="1" skipped="1" failures="0">
+  <testcase classname="Registration test" name="Test verifies that user can create an account and login in it" time="0.002"><skipped />
   </testcase>
  </testsuite>
 </testsuites>
