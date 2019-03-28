@@ -17,50 +17,6 @@ const signUpBtn = element(by.xpath(`//button[@name='signup-button']`));
 const randomUsername = Math.random().toString(36).substring(7);
 const randomPassword = Math.random().toString(36).replace('0.', '');
 
-describe('LogIn tests', () => {
-    async function logIn(username, password) {
-        await accountBtn.click();
-        await loginField.clear().sendKeys(username);
-        await passwordField.clear().sendKeys(password);
-        await loginBtn.click();
-        await browser.wait(async () =>
-            await logoutBtn.isPresent() && await logoutBtn.isDisplayed(), 5000, 'Cannot find logout button'
-        );
-    };
-
-    beforeEach(async () => {
-        await browser.waitForAngularEnabled(false);
-        await browser.get('');
-    });
-
-    // afterEach(async () => {
-    //     await browser.close();
-    // });
-
-    it('Test verifies that user can login using valid credentials', async () => {
-        // await browser.waitForAngularEnabled(false);
-        // await browser.get('');
-        await logIn('6546565', 'p77p77');
-        expect(await pageTitle.getText()).toContain('Личный кабинет');
-    });
-    
-    it('Test verifies that user can not login using invalid credentials', async () => {
-        // await browser.waitForAngularEnabled(false);
-        // await browser.get('');
-        await accountBtn.click();
-        await browser.wait(async () => {
-            await loginField.isPresent() && await loginField.isDisplayed(), 5000, 'Cannot find login field'
-        })
-        await loginField.clear().sendKeys('33dddd33');
-        await passwordField.clear().sendKeys('3333ddd');
-        await loginBtn.click();
-        await browser.wait(async () =>
-            await helpBlock.isPresent() && await helpBlock.isDisplayed(), 10000, 'Error message is not shown'
-        );
-        expect(await helpBlock.getText()).toContain('Некорректный логин или пароль.');
-    });
-});
-
 
 describe('Registration test', () => {
     xit('Test verifies that user can create an account and login in it', async () => {

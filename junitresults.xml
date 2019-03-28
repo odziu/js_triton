@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="LogIn tests" timestamp="2019-03-15T12:53:29" hostname="localhost" time="35.824" errors="0" tests="2" skipped="0" failures="1">
-  <testcase classname="LogIn tests" name="Test verifies that user can login using valid credentials" time="4.877">
-  </testcase>
-  <testcase classname="LogIn tests" name="Test verifies that user can not login using invalid credentials" time="30.935">
-   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
-    at Timeout._onTimeout (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)]]>
+ <testsuite name="LogIn tests" timestamp="2019-03-28T12:39:05" hostname="localhost" time="3.673" errors="0" tests="2" skipped="0" failures="1">
+  <testcase classname="LogIn tests" name="Test verifies that user can not login using invalid credentials" time="3.669">
+   <failure type="exception" message="Failed: stale element reference: element is not attached to the page document
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.16299 x86_64)"><![CDATA[StaleElementReferenceError: stale element reference: element is not attached to the page document
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.16299 x86_64)
+    at Object.checkLegacyResponse (C:\Users\odziu\js_triton\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\odziu\js_triton\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at doSend.then.response (C:\Users\odziu\js_triton\node_modules\selenium-webdriver\lib\http.js:441:30)
+    at process._tickCallback (internal/process/next_tick.js:68:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as isDisplayed] (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as isDisplayed] (C:\Users\odziu\js_triton\node_modules\protractor\built\element.js:831:22)
+    at browser.wait (C:\Users\odziu\js_triton\specs\login_tests_spec.js:59:60)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+From asynchronous test: 
+Error
+    at Suite.describe (C:\Users\odziu\js_triton\specs\login_tests_spec.js:47:5)
+    at addSpecsToSuite (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\odziu\js_triton\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\odziu\js_triton\specs\login_tests_spec.js:20:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)]]>
    </failure>
   </testcase>
+  <testcase classname="LogIn tests" name="Test verifies that user can login using valid credentials" time="0">
+  </testcase>
  </testsuite>
- <testsuite name="Registration test" timestamp="2019-03-15T12:54:05" hostname="localhost" time="0.005" errors="0" tests="1" skipped="1" failures="0">
-  <testcase classname="Registration test" name="Test verifies that user can create an account and login in it" time="0.002"><skipped />
+ <testsuite name="Registration test" timestamp="2019-03-28T12:39:09" hostname="localhost" time="0.001" errors="0" tests="1" skipped="0" failures="0">
+  <testcase classname="Registration test" name="Test verifies that user can create an account and login in it" time="0">
   </testcase>
  </testsuite>
 </testsuites>
