@@ -1,23 +1,33 @@
 // main page
-const accountBtn = element(by.xpath(`//a[@href='/account']`));
-const pageTitle = element(by.xpath('//h1'));
+// const accountBtn = element(by.xpath(`//a[@href='/account']`));
+// const pageTitle = element(by.xpath('//h1'));
+
 // login page
-const loginField = element(by.id('loginform-username'));
-const passwordField = element(by.id('loginform-password'));
-const loginBtn = element(by.xpath(`//button[@name='login-button']`));
-const registrationBtn = element(by.xpath(`//a[@href='/account/registration']`));
-const helpBlock = element(by.xpath(`//form[@id='login-form']/div[2]/p[@class='help-block help-block-error']`));
+// const loginField = element(by.id('loginform-username'));
+// const passwordField = element(by.id('loginform-password'));
+// const loginBtn = element(by.xpath(`//button[@name='login-button']`));
+// const registrationBtn = element(by.xpath(`//a[@href='/account/registration']`));
+// const helpBlock = element(by.xpath(`//form[@id='login-form']/div[2]/p[@class='help-block help-block-error']`));
+
 // account page
-const logoutBtn = element(by.xpath(`//form[@action='/account/logout']/button[@type='submit']`));
+// const logoutBtn = element(by.xpath(`//form[@action='/account/logout']/button[@type='submit']`));
+
 // registration page
-const registrationLoginField = element(by.id('signupform-username'));
-const registrationEmailField = element(by.id('signupform-email'));
-const registrationPasswordField = element(by.id('signupform-password'));
-const signUpBtn = element(by.xpath(`//button[@name='signup-button']`));
-const randomUsername = Math.random().toString(36).substring(7);
-const randomPassword = Math.random().toString(36).replace('0.', '');
+// const registrationLoginField = element(by.id('signupform-username'));
+// const registrationEmailField = element(by.id('signupform-email'));
+// const registrationPasswordField = element(by.id('signupform-password'));
+// const signUpBtn = element(by.xpath(`//button[@name='signup-button']`));
+// const randomUsername = Math.random().toString(36).substring(7);
+// const randomPassword = Math.random().toString(36).replace('0.', '');
+
+
+// const MainPage = require('../../pages/main_page.js');
+// const mainPage = new MainPage();
+const LoginPage = require('../../pages/login_page.js');
+const loginPage = new LoginPage();
 
 describe('LogIn tests', () => {
+    
     async function logIn(username, password) {
         await accountBtn.click();
         await loginField.clear().sendKeys(username);
@@ -37,14 +47,15 @@ describe('LogIn tests', () => {
     //     await browser.close();
     // });
 
-    it('Test verifies that user can login using valid credentials', async () => {
-        await browser.waitForAngularEnabled(false);
-        await browser.get('');
-        await logIn('6546565', 'p77p77');
-        expect(await pageTitle.getText()).toContain('Личный кабинет');
+    fit('Test verifies that user can login using valid credentials', async () => {
+        // await browser.waitForAngularEnabled(false);
+        // await browser.get('');
+        await loginPage.open();
+        // await logIn('6546565', 'p77p77');
+        // expect(await pageTitle.getText()).toContain('Личный кабинет');
     });
     
-    fit('Test verifies that user can not login using invalid credentials', async () => {
+    it('Test verifies that user can not login using invalid credentials', async () => {
         await browser.waitForAngularEnabled(false);
         await browser.get('');
         // await browser.wait(async () => {
