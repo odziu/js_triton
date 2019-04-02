@@ -1,5 +1,3 @@
-// require('ts-node').register();
-
 exports.config = {
       // seleniumAddress: 'http://localhost:4444/wd/hub',
     baseUrl: 'https://www.tritonshoes.ru/',
